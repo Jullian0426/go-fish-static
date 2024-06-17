@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme-mode="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -8,7 +8,65 @@
     <title>Go Fish</title>
   </head>
   <body>
-    <button class="btn">Hi There!</button>
+
+    <div class="app-with-sidebar" style="height: 80rem;">
+      <nav class="sidebar sidebar--drawer">
+        <h2 class="sidebar__brand">Go Fish</h2>
+        <div class="sidebar__content sidebar__content--start">
+          <button class="btn btn--no-border">Games</button>
+          <button class="btn btn--no-border">Stats</button>
+        </div>
+        <div class="sidebar__content sidebar__content--end">
+          <div class="divider"></div>
+          <button class="btn btn--no-border">Profile</button>
+          <button class="btn btn--no-border">Log Out</button>
+        </div>
+      </nav>
+      <div>
+        <div class="game-container">
+          <div class="players">
+            <h2>Players</h2>
+            <div class="card player-data">
+              <div class="card__body">
+                Player 1
+              </div>
+              <div class="card__body">
+                Player 2
+              </div>
+              <div class="card__body">
+                Player 3
+              </div>
+            </div>
+
+            <div class="card ask-selection">
+              <p>Ask</p>
+              <div class="card__body">
+                Player 1
+              </div>
+              <div class="card__body">
+                Player 2
+              </div>
+              <div class="card__body">
+                Player 3
+              </div>
+            </div>
+
+            <p class="hand">Hand</p>
+          </div>
+          <div class="game-feed flex flex-col">
+            <h2>Game Feed</h2>
+            <div class="card feed">
+              <div class="card__body">
+                <p>Text</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container"></div>
+      </div>
+    </div>
+
+
     <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>
