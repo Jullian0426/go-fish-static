@@ -12,22 +12,35 @@
 <body>
   <main class="game-view">
     <section class="game-board">
-      <div class="game-board__header">header</div>
+      <div class="game-board__header">
+        <span class="material-symbols-outlined icon--outlined icon--x-large icon--weight-bold">arrow_back</span>
+        <span class="header_text header-text--large">Game 1</span>
+      </div>
       <div>body</div>
     </section>
 
     <section class="game-feed">
-      <div class="game-feed__header">header</div>
-      <div>body</div>
+      <div class="game-feed__header game-feed__header--space-between">
+        <span class="header_text">Game Feed</span>
+        <div class="badge-primary">Your Turn</div>
+      </div>
+      <div class="game-feed_content">
+        <div class="game-feed_content_chat"></div>
+        <div class="game-feed_content_actions"></div>
+      </div>
     </section>
 
     <section class="hand-view">
-      <span class="card-tray-header">header</span>
+      <div class="card-tray-header">
+        <span class="header_text">Your Hand</span>
+      </div>
       <div>body</div>
     </section>
 
     <section class="book-view">
-      <span class="card-tray-header">header</span>
+      <div class="card-tray-header">
+        <span class="header_text">Your Books</span>
+      </div>
       <div>body</div>
     </section>
   </main>
