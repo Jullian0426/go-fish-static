@@ -70,12 +70,12 @@
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
-  align-items: start;
 }
 
 .game-feed_content_chat {
   display: flex;
   flex-direction: column;
+  align-items: start;
 }
 
 .chat_text-bubble {
@@ -98,4 +98,22 @@
   border: var(--op-border-width) solid var(--op-color-primary-plus-seven);
   background: var(--op-color-primary-plus-max);
   color: var(--op-color-primary-on-plus-max);
+}
+
+.game-feed_content_actions {
+  padding: var(--op-space-small);
+  border-radius: var(--op-radius-x-large);
+  border: var(--op-border-width) solid var(--op-color-primary-plus-six);
+  background: var(--op-color-primary-plus-seven);
+  display: flex;
+  flex-direction: column;
+}
+
+.actions__input-collection {
+  display: flex;
+  gap: var(--op-space-small);
+}
+
+.form-group {
+  flex-grow: 1;
 }
