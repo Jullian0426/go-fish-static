@@ -1,1 +1,52 @@
 @import '@rolemodel/optics/dist/scss/optics';
+
+.game-view {
+  display: grid;
+  grid-template-columns: 1fr calc(130 * var(--op-size-unit));
+  grid-template-rows: 1fr calc(100 * var(--op-size-unit));
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  overflow: auto;
+}
+
+.game-board,
+.game-feed,
+.hand-view,
+.book-view {
+  box-shadow: var(--op-border-all) black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(15 * var(--op-size-unit)) 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  overflow: auto;
+}
+
+.game-board {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.game-feed {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.hand-view {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.book-view {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.game-board__header {
+  box-shadow: var(--op-border-all) black;
+}
+
+.game-feed__header{
+  box-shadow: var(--op-border-all) black;
+}
+
+.card-tray-header {
+  box-shadow: var(--op-border-all) black;
+}
