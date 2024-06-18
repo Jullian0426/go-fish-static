@@ -2,8 +2,8 @@
 
 .game-view {
   display: grid;
-  grid-template-columns: 1fr calc(130 * var(--op-size-unit));
-  grid-template-rows: 1fr calc(100 * var(--op-size-unit));
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
   height: 100vh;
   overflow: auto;
 }
@@ -14,9 +14,13 @@
 .book-view {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: calc(15 * var(--op-size-unit)) 1fr;
+  grid-template-rows: 1fr 4fr;
   box-shadow: var(--op-border-all) var(--op-color-border);
   overflow: auto;
+}
+
+.game-view--large-header-row {
+  grid-template-rows: 1fr 6fr;
 }
 
 .game-board {
