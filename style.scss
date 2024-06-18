@@ -2,8 +2,8 @@
 
 .game-view {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr calc(84 * var(--op-size-unit));
+  grid-template-rows: 1fr calc(56 * var(--op-size-unit));
   height: 100vh;
   overflow: auto;
 }
@@ -14,13 +14,13 @@
 .book-view {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: calc(10 * var(--op-size-unit)) 1fr;
   box-shadow: var(--op-border-all) var(--op-color-border);
   overflow: auto;
 }
 
 .game-view--large-header-row {
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 8fr;
 }
 
 .game-board {
@@ -73,13 +73,14 @@
   padding: var(--op-space-medium);
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .game-feed_content_chat {
   display: flex;
   flex-direction: column;
   align-items: start;
+  overflow: auto;
 }
 
 .chat_text-bubble {
