@@ -2,6 +2,7 @@
 
 .sidebar {
   box-shadow: var(--op-border-all) var(--op-color-primary-base);
+  padding-bottom: var(--op-space-small);
 }
 
 .options {
@@ -11,7 +12,6 @@
 .card-tray {
   height: 20%;
   display: flex;
-  flex-direction: row;
   background-color: var(--op-color-neutral-plus-six);
   color: var(--op-color-neutral-on-plus-six);
   box-shadow: var(--op-border-all) var(--op-color-primary-base);
@@ -19,26 +19,27 @@
 
 .card-row {
   display: flex;
-  flex-direction: row;
   gap: var(--op-space-small);
 }
 
 .playing-card {
   box-shadow: var(--op-border-all) var(--op-color-primary-base);
+  border-radius: var(--op-radius-small);
+  width: auto;
+  height: 12vh;
 }
 
-.hand-display {
+.card-display {
   flex-grow: 0.5;
-}
-
-.book-display {
-  flex-grow: 0.5;
+  padding: var(--op-space-small);
+  gap: var(--op-space-2x-small);
+  display: flex;
+  flex-direction: column;
 }
 
 .game-container {
   height: 80%;
   display: flex;
-  flex-direction: row;
   gap: var(--op-space-small);
 }
 
@@ -48,49 +49,44 @@
   display: flex;
   flex-direction: column;
   gap: var(--op-space-small);
+  padding: var(--op-space-small);
   align-items: center;
 }
 
 .accordion summary {
-  display: block !important;
-  margin-top: var(--op-space-small);
-  margin-bottom: var(--op-space-small);
+  padding: var(--op-space-small);
+  box-shadow: var(--op-border-bottom) var(--op-color-primary-base);
 }
 
 .accordion-content {
   display: flex;
-  flex-direction: row;
   gap: var(--op-space-small);
+  padding: var(--op-space-small);
+  box-shadow: var(--op-border-bottom) var(--op-color-primary-base);
 }
 
 .accordion-playing-card {
-  width: 10%;
-  height: auto;
+  height: 8vh;
 }
 
 .player-data {
-  width: 90%;
+  width: 70%;
+  box-shadow: var(--op-border-all) var(--op-color-primary-base);
 }
 
 .player-info {
-  margin-right: var(--op-space-small);
+  display: flex;
+  gap: var(--op-space-small);
 }
 
 .ask-selection {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 30%;
   gap: var(--op-space-2x-small);
   margin-top: auto;
-}
-
-.align-start {
-  align-self: flex-start;
-}
-
-.player-btn {
-  width: 90%;
+  margin-bottom: var(--op-space-small);
+  padding: var(--op-space-small);
 }
 
 .game-feed {
@@ -98,6 +94,7 @@
   width: 40%;
   display: flex;
   flex-direction: column;
+  padding: var(--op-space-small);
 }
 
 .feed {
@@ -107,6 +104,7 @@
   color: var(--op-color-primary-on-plus-six);
   display: flex;
   flex-direction: column;
+  margin-bottom: var(--op-space-small);
 }
 
 .text-box {
