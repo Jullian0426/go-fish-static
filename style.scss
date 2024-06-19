@@ -43,7 +43,7 @@
 }
 
 .game-view--large-header-row {
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
 }
 
 .game-board {
@@ -68,9 +68,7 @@
   color: var(--op-color-neutral-on-plus-seven-alt);
 }
 
-.game-board__header,
-.game-feed__header,
-.card-tray-header {
+.header-panel {
   box-shadow: var(--op-border-bottom) var(--op-color-border);
   display: flex;
   align-items: center;
@@ -78,7 +76,7 @@
   gap: var(--op-space-large);
 }
 
-.game-feed__header--space-between {
+.header-panel--space-between {
   justify-content: space-between;
 }
 
@@ -86,12 +84,12 @@
   font-weight: var(--op-font-weight-semi-bold);
 }
 
-.gf-emphasis--x-large {
-  font-size: var(--op-font-x-large);
+.game-board .header-panel span {
+  font-size: var(--op-font-3x-large);
 }
 
-.gf-emphasis--3x-large {
-  font-size: var(--op-font-3x-large);
+.header-panel span {
+  font-size: var(--op-font-x-large);
 }
 
 .game-feed_content {
@@ -123,7 +121,7 @@
 .text-bubble--fish {
   border: var(--op-border-width) solid var(--op-color-alerts-warning-plus-five);
   background: var(--op-color-alerts-warning-plus-seven);
-  color: var(--op-color-alerts-warning-on-plus-seven);
+  color: var(--op-color-alerts-warning-on-plus-seven-alt);
 }
 
 .text-bubble--draw {
@@ -157,7 +155,6 @@
   gap: var(--op-space-x-small);
   padding-top: var(--op-space-2x-large);
   padding-inline: var(--op-space-3x-large);
-  align-items: stretch;
   overflow: auto;
 }
 
@@ -171,6 +168,7 @@
 .accordion {
   border-radius: var(--op-radius-medium);
   border: var(--op-border-width) solid var(--op-color-border);
+  max-width: var(--op-breakpoint-medium);
 }
 
 .accordion summary {
