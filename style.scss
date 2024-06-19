@@ -1,5 +1,6 @@
 @import '@rolemodel/optics/dist/scss/optics';
 
+// Root Variables
 :root {
   --gf-card-border-radius: 8px;
 }
@@ -23,6 +24,7 @@
   @include radius;
 }
 
+// Game View Layout
 .game-view {
   display: grid;
   grid-template-columns: 1fr calc(84 * var(--op-size-unit));
@@ -31,6 +33,11 @@
   overflow: auto;
 }
 
+.game-view--large-header-row {
+  grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
+}
+
+// Individual Sections Layout
 .game-board,
 .game-feed,
 .hand-view,
@@ -40,10 +47,6 @@
   grid-template-rows: calc(10 * var(--op-size-unit)) 1fr;
   box-shadow: var(--op-border-all) var(--op-color-border);
   overflow: auto;
-}
-
-.game-view--large-header-row {
-  grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
 }
 
 .game-board {
@@ -68,6 +71,7 @@
   color: var(--op-color-neutral-on-plus-seven-alt);
 }
 
+// Header Panels
 .header-panel {
   box-shadow: var(--op-border-bottom) var(--op-color-border);
   display: flex;
@@ -80,10 +84,6 @@
   justify-content: space-between;
 }
 
-.gf-emphasis {
-  font-weight: var(--op-font-weight-semi-bold);
-}
-
 .game-board .header-panel span {
   font-size: var(--op-font-3x-large);
 }
@@ -92,6 +92,11 @@
   font-size: var(--op-font-x-large);
 }
 
+.gf-emphasis {
+  font-weight: var(--op-font-weight-semi-bold);
+}
+
+// Game Feed Content
 .game-feed_content {
   display: flex;
   padding: var(--op-space-medium);
@@ -108,6 +113,7 @@
   gap: var(--op-space-small);
 }
 
+// Chat Text Bubbles
 .chat_text-bubble {
   border-radius: var(--op-radius-x-large);
   padding: var(--op-space-small);
@@ -130,6 +136,7 @@
   color: var(--op-color-primary-on-plus-max);
 }
 
+// Game Feed Actions
 .game-feed_content_actions {
   padding: var(--op-space-small);
   border-radius: var(--op-radius-x-large);
@@ -149,6 +156,7 @@
   flex-grow: 1;
 }
 
+// Player Area
 .player-area {
   display: flex;
   flex-direction: column;
@@ -158,6 +166,7 @@
   overflow: auto;
 }
 
+// Accordion Group
 .accordion-group {
   display: flex;
   flex-direction: column;
@@ -176,6 +185,11 @@
   padding: var(--op-space-small);
   border-top-left-radius: var(--op-radius-medium);
   border-top-right-radius: var(--op-radius-medium);
+}
+
+.player-info {
+  display: flex;
+  justify-content: space-between;
 }
 
 .accordion[open] {
@@ -198,11 +212,7 @@
   }
 }
 
-.player-info {
-  display: flex;
-  justify-content: space-between;
-}
-
+// Card Tray and Card Row
 .card-tray {
   padding: var(--op-space-medium);
   display: flex;
@@ -230,10 +240,12 @@
   }
 }
 
+// Playing Card
 .playing-card {
   border-radius: var(--gf-card-border-radius);
   border: var(--op-border-width) solid var(--op-color-primary-base);
   // TODO: fix bottom-right corner of shadow
   box-shadow: var(--op-shadow-x-large);
   filter: brightness(1.5);
+  aspect-ratio: 3 / 4;
 }
