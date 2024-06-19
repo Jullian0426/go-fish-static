@@ -1,5 +1,28 @@
 @import '@rolemodel/optics/dist/scss/optics';
 
+:root {
+  --gf-card-border-radius: 8px;
+}
+
+@mixin color-varieties {
+  --op-color-primary-h: 40;
+  --op-color-primary-s: 38;
+  --op-color-primary-l: 40;
+}
+
+@mixin radius {
+  --op-radius-small: 8px;
+  --op-radius-medium: 16px;
+  --op-radius-large: 24px;
+  --op-radius-x-large: 32px;
+  --op-radius-2x-large: 40px;
+}
+
+:root[data-theme='jullian-light'] {
+  @include color-varieties;
+  @include radius;
+}
+
 .game-view {
   display: grid;
   grid-template-columns: 1fr calc(84 * var(--op-size-unit));
@@ -153,6 +176,8 @@
 .accordion summary {
   gap: var(--op-space-x-large);
   padding: var(--op-space-small);
+  border-top-left-radius: var(--op-radius-medium);
+  border-top-right-radius: var(--op-radius-medium);
 }
 
 .accordion[open] {
@@ -196,13 +221,19 @@
   display: flex;
   overflow-x: auto;
 
-  > *:not(:first-child) {
+  >*:not(:first-child) {
     margin-left: calc(-1 * var(--op-space-2x-large));
   }
 }
 
+.card-row--books {
+  >* {
+    height: 80%;
+  }
+}
+
 .playing-card {
-  border-radius: var(--op-radius-large);
+  border-radius: var(--gf-card-border-radius);
   border: var(--op-border-width) solid var(--op-color-primary-base);
   // TODO: fix bottom-right corner of shadow
   box-shadow: var(--op-shadow-x-large);
