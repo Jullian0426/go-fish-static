@@ -146,3 +146,25 @@
   display: flex;
   justify-content: space-between;
 }
+
+.card-tray {
+  padding: var(--op-space-medium);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--op-space-medium);
+  overflow: auto;
+}
+
+.card-tray--border-top {
+  border-top: var(--op-border-width) solid var(--op-color-border);
+}
+
+.card-row {
+  display: flex;
+  gap: var(--op-space-x-small);
+  overflow-x: auto;
+}
+
+.playing-card {
+  border-radius: var(--op-radius-medium);
+}
