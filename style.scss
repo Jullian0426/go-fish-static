@@ -20,7 +20,7 @@
 }
 
 .game-view--large-header-row {
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 10fr;
 }
 
 .game-board {
@@ -59,12 +59,15 @@
   justify-content: space-between;
 }
 
-.header_text {
+.gf-emphasis {
   font-weight: var(--op-font-weight-semi-bold);
+}
+
+.gf-emphasis--x-large {
   font-size: var(--op-font-x-large);
 }
 
-.header-text--large {
+.gf-emphasis--3x-large {
   font-size: var(--op-font-3x-large);
 }
 
@@ -111,6 +114,7 @@
   border-radius: var(--op-radius-x-large);
   border: var(--op-border-width) solid var(--op-color-primary-plus-six);
   background: var(--op-color-primary-plus-seven);
+  color: var(--op-color-primary-on-plus-seven);
   display: flex;
   flex-direction: column;
 }
@@ -129,9 +133,15 @@
   flex-direction: column;
   gap: var(--op-space-x-small);
   padding-top: var(--op-space-2x-large);
-  padding-bottom: var(--op-space-4x-large);
   padding-inline: var(--op-space-3x-large);
   align-items: stretch;
+  overflow: auto;
+}
+
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-x-small);
   overflow: auto;
 }
 
@@ -142,6 +152,27 @@
 
 .accordion summary {
   gap: var(--op-space-x-large);
+  padding: var(--op-space-small);
+}
+
+.accordion[open] {
+  border: var(--op-border-width) solid var(--op-color-primary-plus-four);
+
+  summary {
+    background: var(--op-color-primary-plus-eight);
+    color: var(--op-color-primary-on-plus-eight-alt);
+
+    .accordion__marker {
+      border-radius: var(--op-radius-circle);
+      box-shadow: var(--op-border-all) var(--op-color-primary-plus-three);
+      background: var(--op-color-primary-plus-five);
+      color: var(--op-color-primary-on-plus-five);
+    }
+  }
+
+  .card-tray--border-top {
+    border-top: var(--op-border-width) solid var(--op-color-primary-plus-four);
+  }
 }
 
 .player-info {
@@ -173,5 +204,7 @@
 .playing-card {
   border-radius: var(--op-radius-large);
   border: var(--op-border-width) solid var(--op-color-primary-base);
-  
+  // TODO: fix bottom-right corner of shadow
+  box-shadow: var(--op-shadow-x-large);
+  filter: brightness(1.5);
 }
