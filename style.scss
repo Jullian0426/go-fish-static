@@ -24,7 +24,7 @@
   @include radius;
 }
 
-// Game View Layout
+// Layout
 .game-view {
   display: grid;
   grid-template-columns: 1fr calc(84 * var(--op-size-unit));
@@ -33,11 +33,6 @@
   overflow: auto;
 }
 
-.game-view--large-header-row {
-  grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
-}
-
-// Individual Sections Layout
 .game-board,
 .game-feed,
 .hand-view,
@@ -47,6 +42,10 @@
   grid-template-rows: calc(10 * var(--op-size-unit)) 1fr;
   box-shadow: var(--op-border-all) var(--op-color-border);
   overflow: auto;
+}
+
+.game-view--large-header-row {
+  grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
 }
 
 .game-board {
