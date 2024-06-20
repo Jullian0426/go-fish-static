@@ -1,0 +1,111 @@
+// Header Panels
+.header-panel {
+  box-shadow: var(--op-border-bottom) var(--op-color-border);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--op-space-large);
+  gap: var(--op-space-large);
+}
+
+// Game Feed Content
+.game-feed_content {
+  display: flex;
+  padding: var(--op-space-medium);
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.game-feed_content_chat {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  overflow: auto;
+  gap: var(--op-space-small);
+}
+
+// Game Feed Actions
+.game-feed_content_actions {
+  padding: var(--op-space-small);
+  border-radius: var(--op-radius-x-large);
+  border: var(--op-border-width) solid var(--op-color-primary-plus-six);
+  background: var(--op-color-primary-plus-seven);
+  color: var(--op-color-primary-on-plus-seven);
+  display: flex;
+  flex-direction: column;
+}
+
+// Player Area
+.player-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-x-small);
+  padding-top: var(--op-space-2x-large);
+  padding-inline: var(--op-space-3x-large);
+  overflow: auto;
+}
+
+// Accordion Group
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-x-small);
+  overflow: auto;
+}
+
+.accordion {
+  border-radius: var(--op-radius-medium);
+  border: var(--op-border-width) solid var(--op-color-border);
+  max-width: var(--op-breakpoint-medium);
+}
+
+.accordion summary {
+  gap: var(--op-space-x-large);
+  padding: var(--op-space-small);
+  border-top-left-radius: var(--op-radius-medium);
+  border-top-right-radius: var(--op-radius-medium);
+}
+
+.player-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion[open] {
+  border: var(--op-border-width) solid var(--op-color-primary-plus-four);
+
+  summary {
+    background: var(--op-color-primary-plus-eight);
+    color: var(--op-color-primary-on-plus-eight-alt);
+
+    .accordion__marker {
+      border-radius: var(--op-radius-circle);
+      box-shadow: var(--op-border-all) var(--op-color-primary-plus-three);
+      background: var(--op-color-primary-plus-five);
+      color: var(--op-color-primary-on-plus-five);
+    }
+  }
+
+  .card-tray--border-top {
+    border-top: var(--op-border-width) solid var(--op-color-primary-plus-four);
+  }
+}
+
+// Card Tray and Card Row
+.card-tray {
+  padding: var(--op-space-medium);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--op-space-medium);
+  overflow: auto;
+}
+
+// Playing Card
+.playing-card {
+  border-radius: var(--gf-card-border-radius);
+  border: var(--op-border-width) solid var(--op-color-primary-base);
+  // TODO: fix bottom-right corner of shadow
+  box-shadow: var(--op-shadow-x-large);
+  filter: brightness(1.5);
+  aspect-ratio: 3 / 4;
+}
