@@ -1,0 +1,13 @@
+.panel-header {
+  box-shadow: var(--op-border-bottom) var(--op-color-border);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--op-space-large);
+  gap: var(--op-space-large);
+  font-size: var(--op-font-x-large);
+
+  // Modifiers
+  &.panel-header--large {
+    font-size: var(--op-font-3x-large);
+  }
+}
