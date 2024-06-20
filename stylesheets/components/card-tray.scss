@@ -1,7 +1,8 @@
 .card-tray {
   padding: var(--op-space-medium);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--op-space-medium);
   overflow: auto;
 
   // Children
@@ -15,10 +16,13 @@
     }
   
     // Modifiers
-    &.card-row--books {
-      >* {
-        height: 80%;
-      }
+    &.card-row--accordion-books {
+      height: calc(22 * var(--op-size-unit));
+      max-width: calc(60 * var(--op-size-unit));
+    }
+
+    &.card-row--your-books {
+      height: calc(30 * var(--op-size-unit));
     }
   }
 
