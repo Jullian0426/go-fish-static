@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme-mode="light" data-theme="jullian-light">
+<html lang="en" data-theme-mode="light" data-theme="jullianlight">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,9 +11,9 @@
 
 <body class="app-body">
   <main class="game-view">
-    <section class="game-board game-view--large-header-row">
-      <div class="header-panel">
-        <span class="material-symbols-outlined icon--outlined icon--x-large icon--weight-bold">arrow_back</span>
+    <section class="gf-panel gf-panel--large-header-row gf-panel--board-view">
+      <div class="gf-panel__panel-header">
+        <span class="material-symbols-outlined icon--x-large icon--weight-bold">arrow_back</span>
         <span class="gf-emphasis">Game 1</span>
       </div>
       <div class="player-area">
@@ -21,8 +21,7 @@
         <div class="accordion-group">
           <details class="accordion">
             <summary>
-              <span
-                class="material-symbols-outlined accordion__marker">arrow_right</span>
+              <span class="material-symbols-outlined accordion__marker">arrow_right</span>
               <div class="player-info">
                 <span>Dominic</span>
                 <div class="flex gap-xl">
@@ -30,7 +29,7 @@
                   <span>Books: <span class="gf-emphasis">2</span></span>
                 </div>
               </div>
-  
+
             </summary>
             <div class="card-tray card-tray--border-top">
               <div class="card-row">
@@ -50,8 +49,7 @@
           </details>
           <details class="accordion">
             <summary>
-              <span
-                class="material-symbols-outlined accordion__marker">arrow_right</span>
+              <span class="material-symbols-outlined accordion__marker">arrow_right</span>
               <div class="player-info">
                 <span>Gabriel</span>
                 <div class="flex gap-xl">
@@ -59,7 +57,7 @@
                   <span>Books: <span class="gf-emphasis">2</span></span>
                 </div>
               </div>
-  
+
             </summary>
             <div class="card-tray card-tray--border-top">
               <div class="card-row">
@@ -77,8 +75,7 @@
           </details>
           <details class="accordion">
             <summary>
-              <span
-                class="material-symbols-outlined accordion__marker">arrow_right</span>
+              <span class="material-symbols-outlined accordion__marker">arrow_right</span>
               <div class="player-info">
                 <span>Jullian</span>
                 <div class="flex gap-xl">
@@ -86,7 +83,7 @@
                   <span>Books: <span class="gf-emphasis">3</span></span>
                 </div>
               </div>
-  
+
             </summary>
             <div class="card-tray card-tray--border-top">
               <div class="card-row">
@@ -104,32 +101,33 @@
       </div>
     </section>
 
-    <section class="game-feed game-view--large-header-row">
-      <div class="header-panel header-panel--space-between">
+    <section class="gf-panel gf-panel--large-header-row gf-panel--feed-view">
+      <div class="gf-panel__panel-header justify-between">
         <span class="gf-emphasis">Game Feed</span>
         <div class="badge-primary">Your Turn</div>
       </div>
-      <div class="game-feed_content">
-        <div class="game-feed_content_chat">
-          <div class="chat_text-bubble text-bubble--ask">
-            <span>Scott Asked <span class="gf-emphasis">Dominic</span> for any <span class="gf-emphasis">8s</span></span>
+      <div class="gf-panel__body">
+        <div class="notification-feed">
+          <div class="notification">
+            <span>Scott Asked <span class="gf-emphasis">Dominic</span> for any <span
+                class="gf-emphasis">8s</span></span>
           </div>
           <div class="flex items-center">
             <span class="material-symbols-outlined icon--x-large icon--weight-semi-bold">subdirectory_arrow_right</span>
-            <div class="chat_text-bubble text-bubble--fish">
+            <div class="notification notification--fish">
               <span class="gf-emphasis">Go Fish: Dominic doesn't have any 8s</span>
             </div>
           </div>
           <div class="flex items-center">
             <span class="material-symbols-outlined icon--x-large icon--weight-semi-bold">subdirectory_arrow_right</span>
-            <div class="chat_text-bubble text-bubble--draw">
+            <div class="notification notification--draw">
               <span class="gf-emphasis">You drew a 7 of Diamonds</span>
             </div>
           </div>
         </div>
-        <div class="game-feed_content_actions">
+        <div class="gf-panel__body_actions">
           <div class="actions__input-collection">
-            <div class="form-group">
+            <div class="form-group flex-grow-1">
               <label for="player">Player</label>
               <select class="form-control form-control--large" id="player">
                 <option>Gabriel</option>
@@ -137,7 +135,7 @@
                 <option>Jullian</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="form-group flex-grow-1">
               <label for="rank">Card Rank</label>
               <select class="form-control form-control--large" id="rank">
                 <option>Two</option>
@@ -161,8 +159,8 @@
       </div>
     </section>
 
-    <section class="hand-view">
-      <div class="header-panel">
+    <section class="gf-panel gf-panel--hand-view">
+      <div class="gf-panel__panel-header">
         <span class="gf-emphasis">Your Hand</span>
       </div>
       <div class="card-tray">
@@ -176,8 +174,8 @@
       </div>
     </section>
 
-    <section class="book-view">
-      <div class="header-panel">
+    <section class="gf-panel gf-panel--book-view">
+      <div class="gf-panel__panel-header">
         <span class="gf-emphasis">Your Books</span>
       </div>
       <div class="card-tray">

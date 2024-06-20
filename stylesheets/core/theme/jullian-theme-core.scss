@@ -1,7 +1,7 @@
 @mixin color-varieties {
-  --op-color-primary-h: 40;
-  --op-color-primary-s: 38;
-  --op-color-primary-l: 40;
+  --op-color-primary-h: 40deg;
+  --op-color-primary-s: 38%;
+  --op-color-primary-l: 40%;
 }
 
 @mixin radius {

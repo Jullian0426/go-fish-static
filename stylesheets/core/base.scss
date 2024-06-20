@@ -1,14 +1,22 @@
+// TODO: refactor into components
+
 // Header Panels
-.header-panel {
+.gf-panel__panel-header {
   box-shadow: var(--op-border-bottom) var(--op-color-border);
   display: flex;
   align-items: center;
   padding-inline: var(--op-space-large);
   gap: var(--op-space-large);
+  font-size: var(--op-font-x-large);
+
+  // Modifiers
+  &.gf-panel__panel-header--large {
+    font-size: var(--op-font-3x-large);
+  }
 }
 
 // Game Feed Content
-.game-feed_content {
+.gf-panel__body {
   display: flex;
   padding: var(--op-space-medium);
   flex-direction: column;
@@ -16,16 +24,8 @@
   overflow: auto;
 }
 
-.game-feed_content_chat {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  overflow: auto;
-  gap: var(--op-space-small);
-}
-
 // Game Feed Actions
-.game-feed_content_actions {
+.gf-panel__body_actions {
   padding: var(--op-space-small);
   border-radius: var(--op-radius-x-large);
   border: var(--op-border-width) solid var(--op-color-primary-plus-six);
@@ -33,6 +33,11 @@
   color: var(--op-color-primary-on-plus-seven);
   display: flex;
   flex-direction: column;
+}
+
+.actions__input-collection {
+  display: flex;
+  gap: var(--op-space-small);
 }
 
 // Player Area
@@ -100,11 +105,28 @@
   overflow: auto;
 }
 
+.card-row {
+  display: flex;
+  overflow: auto;
+
+  // Elements
+  >*:not(:first-child) {
+    margin-left: calc(-1 * var(--op-space-2x-large));
+  }
+
+  // Modifiers
+  &.card-row--books {
+    >* {
+      height: 80%;
+    }
+  }
+}
+
 // Playing Card
 .playing-card {
   border-radius: var(--gf-card-border-radius);
   border: var(--op-border-width) solid var(--op-color-primary-base);
-  // TODO: fix bottom-right corner of shadow
+  // TODO: fix shadow being cut off on bottom
   box-shadow: var(--op-shadow-x-large);
   filter: brightness(1.5);
   aspect-ratio: 3 / 4;

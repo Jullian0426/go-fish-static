@@ -7,39 +7,37 @@
   overflow: auto;
 }
 
-.game-board,
-.game-feed,
-.hand-view,
-.book-view {
+.gf-panel {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: calc(10 * var(--op-size-unit)) 1fr;
   box-shadow: var(--op-border-all) var(--op-color-border);
   overflow: auto;
-}
 
-.game-view--large-header-row {
-  grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
-}
+  // Modifiers
+  &.gf-panel--large-header-row {
+    grid-template-rows: calc(20 * var(--op-size-unit)) 1fr;
+  }
 
-.game-board {
-  grid-area: 1 / 1 / 2 / 2;
-}
+  &.gf-panel--board-view {
+    grid-area: 1 / 1 / 2 / 2;
+  }
 
-.game-feed {
-  grid-area: 1 / 2 / 2 / 3;
-  background-color: var(--op-color-primary-plus-eight);
-  color: var(--op-color-primary-on-plus-eight-alt);
-}
+  &.gf-panel--feed-view {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--op-color-primary-plus-eight);
+    color: var(--op-color-primary-on-plus-eight-alt);
+  }
 
-.hand-view {
-  grid-area: 2 / 1 / 3 / 2;
-  background-color: var(--op-color-neutral-plus-seven);
-  color: var(--op-color-neutral-on-plus-seven-alt);
-}
+  &.gf-panel--hand-view {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: var(--op-color-neutral-plus-seven);
+    color: var(--op-color-neutral-on-plus-seven-alt);
+  }
 
-.book-view {
-  grid-area: 2 / 2 / 3 / 3;
-  background-color: var(--op-color-neutral-plus-seven);
-  color: var(--op-color-neutral-on-plus-seven-alt);
+  &.gf-panel--book-view {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--op-color-neutral-plus-seven);
+    color: var(--op-color-neutral-on-plus-seven-alt);
+  }
 }
