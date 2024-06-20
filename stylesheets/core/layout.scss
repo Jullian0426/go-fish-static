@@ -11,8 +11,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: calc(10 * var(--op-size-unit)) 1fr;
-  box-shadow: var(--op-border-all) var(--op-color-border);
-  overflow: auto;
 
   // Modifiers
   &.gf-panel--large-header-row {
