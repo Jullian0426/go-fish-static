@@ -1,0 +1,25 @@
+// Card Tray and Card Row
+.card-tray {
+  padding: var(--op-space-medium);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--op-space-medium);
+  overflow: auto;
+
+  .card-row {
+    display: flex;
+    overflow: auto;
+  
+    // Elements
+    >*:not(:first-child) {
+      margin-left: calc(-1 * var(--op-space-2x-large));
+    }
+  
+    // Modifiers
+    &.card-row--books {
+      >* {
+        height: 80%;
+      }
+    }
+  }
+}

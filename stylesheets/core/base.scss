@@ -24,22 +24,6 @@
   overflow: auto;
 }
 
-// Game Feed Actions
-.gf-panel__body_actions {
-  padding: var(--op-space-small);
-  border-radius: var(--op-radius-x-large);
-  border: var(--op-border-width) solid var(--op-color-primary-plus-six);
-  background: var(--op-color-primary-plus-seven);
-  color: var(--op-color-primary-on-plus-seven);
-  display: flex;
-  flex-direction: column;
-}
-
-.actions__input-collection {
-  display: flex;
-  gap: var(--op-space-small);
-}
-
 // Player Area
 .player-area {
   display: flex;
@@ -93,32 +77,6 @@
 
   .card-tray--border-top {
     border-top: var(--op-border-width) solid var(--op-color-primary-plus-four);
-  }
-}
-
-// Card Tray and Card Row
-.card-tray {
-  padding: var(--op-space-medium);
-  display: flex;
-  justify-content: space-between;
-  gap: var(--op-space-medium);
-  overflow: auto;
-}
-
-.card-row {
-  display: flex;
-  overflow: auto;
-
-  // Elements
-  >*:not(:first-child) {
-    margin-left: calc(-1 * var(--op-space-2x-large));
-  }
-
-  // Modifiers
-  &.card-row--books {
-    >* {
-      height: 80%;
-    }
   }
 }
 
