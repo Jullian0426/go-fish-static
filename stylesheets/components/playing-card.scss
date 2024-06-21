@@ -1,8 +1,5 @@
 .playing-card {
   border-radius: var(--gf-card-border-radius);
-  border: var(--op-border-width) solid var(--op-color-primary-base);
   // TODO: fix shadow being cut off on bottom
   box-shadow: var(--op-shadow-x-large);
-  filter: brightness(1.5);
-  aspect-ratio: 3 / 4;
 }

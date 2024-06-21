@@ -16,6 +16,10 @@
     }
   
     // Modifiers
+    &.card-row--accordion {
+      height: calc(30 * var(--op-size-unit));
+    }
+
     &.card-row--accordion-books {
       height: calc(22 * var(--op-size-unit));
       max-width: calc(60 * var(--op-size-unit));
