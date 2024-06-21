@@ -5,39 +5,32 @@
   gap: var(--op-space-medium);
   overflow: auto;
 
-  // Children
-  .card-row {
-    display: flex;
-    overflow: auto;
-  
-    // Children
-    >*:not(:first-child) {
-      margin-left: calc(-1 * var(--op-space-2x-large));
-    }
-
-    .playing-card {
-      border-radius: var(--gf-card-border-radius);
-      // TODO: fix shadow being cut off on bottom
-      box-shadow: var(--op-shadow-x-large);
-    }
-  
-    // Modifiers
-    &.card-row--accordion {
-      height: calc(30 * var(--op-size-unit));
-    }
-
-    &.card-row--accordion-books {
-      height: calc(22 * var(--op-size-unit));
-      max-width: calc(60 * var(--op-size-unit));
-    }
-
-    &.card-row--your-books {
-      height: calc(30 * var(--op-size-unit));
-    }
-  }
-
   // Modifiers
   .card-tray--border-top {
     border-top: var(--op-border-width) solid var(--op-color-border);
+  }
+}
+
+.card-row {
+  display: flex;
+  overflow: auto;
+
+  // Children
+  .playing-card:not(:first-child) {
+    margin-left: calc(-1 * var(--op-space-2x-large));
+  }
+
+  // Modifiers
+  &.card-row--accordion {
+    height: calc(30 * var(--op-size-unit));
+  }
+
+  &.card-row--accordion-books {
+    height: calc(22 * var(--op-size-unit));
+    max-width: calc(60 * var(--op-size-unit));
+  }
+
+  &.card-row--your-books {
+    height: calc(30 * var(--op-size-unit));
   }
 }

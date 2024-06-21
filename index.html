@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme-mode="light" data-theme="cyan">
+<html lang="en" data-theme-mode="dark" data-theme="cyan">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,7 +11,7 @@
 
 <body class="app-body">
   <main class="game-view">
-    <section class="gf-panel gf-panel--large-header-row gf-panel--board-view">
+    <section class="gf-panel gf-panel--large-header-row board-view">
       <div class="gf-panel__panel-header gf-panel__panel-header--large">
         <span class="material-symbols-outlined icon--x-large icon--weight-bold">arrow_back</span>
         <span class="gf-emphasis">Game 1</span>
@@ -19,7 +19,7 @@
       <div class="gf-panel__panel-body gf-panel__panel-body--players">
         <span class="gf-emphasis">Players:</span>
         <div class="accordion-group">
-          <details class="accordion">
+          <details class="accordion" open>
             <summary>
               <span class="material-symbols-outlined accordion__marker">arrow_right</span>
               <div class="flex justify-between">
@@ -33,17 +33,17 @@
             </summary>
             <div class="card-tray card-tray--border-top">
               <div class="card-row card-row--accordion">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
               </div>
               <div class="card-row card-row--accordion-books">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
               </div>
             </div>
           </details>
@@ -61,15 +61,15 @@
             </summary>
             <div class="card-tray card-tray--border-top">
               <div class="card-row card-row--accordion">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
               </div>
               <div class="card-row card-row--accordion-books">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
               </div>
             </div>
           </details>
@@ -87,13 +87,13 @@
             </summary>
             <div class="card-tray card-tray--border-top">
               <div class="card-row card-row--accordion">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
               </div>
               <div class="card-row card-row--accordion-books">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-                <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
+                <img src="/assets/back-card.svg" alt="Playing Card">
               </div>
             </div>
           </details>
@@ -101,26 +101,26 @@
       </div>
     </section>
 
-    <section class="gf-panel gf-panel--large-header-row gf-panel--feed-view">
+    <section class="gf-panel gf-panel--large-header-row feed-view">
       <div class="gf-panel__panel-header justify-between">
         <span class="gf-emphasis">Game Feed</span>
         <div class="badge-primary badge--with-border">Your Turn</div>
       </div>
       <div class="gf-panel__panel-body gf-panel__panel-body--feed">
         <div class="notification-feed">
-          <div class="notification">
+          <div class="notification notification--question">
             <span>Scott Asked <span class="gf-emphasis">Dominic</span> for any <span
                 class="gf-emphasis">8s</span></span>
           </div>
-          <div class="flex items-center">
+          <div class="notification-feed__reply">
             <span class="material-symbols-outlined icon--x-large icon--weight-semi-bold">subdirectory_arrow_right</span>
-            <div class="notification notification--fish">
+            <div class="notification notification--response">
               <span class="gf-emphasis">Go Fish: Dominic doesn't have any 8s</span>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="notification-feed__reply">
             <span class="material-symbols-outlined icon--x-large icon--weight-semi-bold">subdirectory_arrow_right</span>
-            <div class="notification notification--draw">
+            <div class="notification notification--action">
               <span class="gf-emphasis">You drew a 7 of Diamonds</span>
             </div>
           </div>
@@ -159,30 +159,30 @@
       </div>
     </section>
 
-    <section class="gf-panel gf-panel--hand-view">
+    <section class="gf-panel hand-view">
       <div class="gf-panel__panel-header">
         <span class="gf-emphasis">Your Hand</span>
       </div>
       <div class="card-tray">
         <div class="card-row">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
         </div>
       </div>
     </section>
 
-    <section class="gf-panel gf-panel--book-view">
+    <section class="gf-panel book-view">
       <div class="gf-panel__panel-header">
         <span class="gf-emphasis">Your Books</span>
       </div>
       <div class="card-tray">
         <div class="card-row card-row--your-books">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
-          <img class="playing-card" src="/assets/back-red.png" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
+          <img src="/assets/back-card.svg" alt="Playing Card">
         </div>
       </div>
     </section>

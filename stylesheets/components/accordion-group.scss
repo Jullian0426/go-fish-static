@@ -23,13 +23,13 @@
     border: var(--op-border-width) solid var(--op-color-primary-plus-four);
   
     summary {
-      background: var(--op-color-primary-plus-eight);
+      background-color: var(--op-color-primary-plus-eight);
       color: var(--op-color-primary-on-plus-eight-alt);
   
       .accordion__marker {
         border-radius: var(--op-radius-circle);
         box-shadow: var(--op-border-all) var(--op-color-primary-plus-three);
-        background: var(--op-color-primary-plus-five);
+        background-color: var(--op-color-primary-plus-five);
         color: var(--op-color-primary-on-plus-five);
       }
     }
