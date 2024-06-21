@@ -9,6 +9,9 @@
 @import 'core/layout';
 @import 'core/utilities';
 
+// Optics Overrides
+@import 'optics-overrides/badge';
+
 // Components
 @import 'components/notification-feed';
 @import 'components/card-tray';
