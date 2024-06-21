@@ -14,6 +14,12 @@
     >*:not(:first-child) {
       margin-left: calc(-1 * var(--op-space-2x-large));
     }
+
+    .playing-card {
+      border-radius: var(--gf-card-border-radius);
+      // TODO: fix shadow being cut off on bottom
+      box-shadow: var(--op-shadow-x-large);
+    }
   
     // Modifiers
     &.card-row--accordion {
